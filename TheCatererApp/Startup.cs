@@ -1,4 +1,3 @@
-using EntityLayerModel.DataAccess;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -12,7 +11,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-
+using TheCatererApp.DataAccess;
 
 namespace TheCatererApp
 {
@@ -37,7 +36,7 @@ namespace TheCatererApp
                 .AddEntityFrameworkStores<CatererDbContext>();
             services.AddControllersWithViews();
 
-          //  services.AddDbContext<CatererDbContext>(option => option.UseSqlServer(Configuration.GetConnectionString("CatererConnection")));
+            services.AddDbContext<CatererDbContext>(option => option.UseSqlServer(Configuration.GetConnectionString("CatererConnection")));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

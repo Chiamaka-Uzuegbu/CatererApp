@@ -7,7 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 using TheCatererApp.Models;
 
-namespace EntityLayerModel.DataAccess
+namespace TheCatererApp.DataAccess
 {
    public class CatererDbContext: DbContext
     {

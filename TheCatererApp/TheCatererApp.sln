@@ -6,6 +6,9 @@ MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TheCatererApp", "TheCatererApp.csproj", "{A6846585-48DF-4A58-8381-00B3DCFA896A}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EntityLayerModell", "..\EntityLayerModell\EntityLayerModell.csproj", "{B583F2D9-4246-4950-8D66-07065898DE92}"
+	ProjectSection(ProjectDependencies) = postProject
+		{A6846585-48DF-4A58-8381-00B3DCFA896A} = {A6846585-48DF-4A58-8381-00B3DCFA896A}
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CatererTestProject1", "..\CatererTestProject1\CatererTestProject1.csproj", "{457F1144-7F5A-43F0-BEA2-D0A06784E67F}"
 EndProject
