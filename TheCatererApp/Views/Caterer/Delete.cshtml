@@ -1,0 +1,73 @@
+﻿
+@model TheCatererApp.Models.Caterer
+
+<form method="post" asp-action="DeletePost">
+    <div class="border p-3">
+        <input asp-for="id" hidden />
+        <div class="form-group row">
+            <h2 class="text-info pl-3">Delete Category</h2>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-8">
+            <div class="form-group row">
+                <div class="col-4">
+                    <label asp-for=" Name"></label>
+                </div>
+                <div class="col-8">
+                    <input asp-for=" Name" disabled class="form-control">
+                </div>
+                </div>
+                </div>
+
+            </div>
+            <div class="form-group row">
+                <div class="col 4">
+                    <label asp-for=" Services "></label>
+                </div>
+                <div class="col-8">
+                    <input asp-for="Services" disabled class="form-control">
+                </div>
+
+                <div class="form-group row">
+                    <div class="col 4">
+                        <label asp-for=" Description "></label>
+                    </div>
+                    <div class="col-8">
+                        <input asp-for="Description" disabled class="form-control">
+                    </div>
+
+                    <div class="form-group row">
+                        <div class="col 4">
+                            <label asp-for=" Location "></label>
+                        </div>
+                        <div class="col-8">
+                            <input asp-for="Location" disabled class="form-control">
+                        </div>
+                        
+                    </div>
+                    <div class="form-group row">
+                        <div class="col-8 offset-4 row">
+                            <div class="col">
+                                <input type="submit" class="btn btn-danger" value="Delete" />
+                            </div>
+                            <div class="col">
+                                <a asp-action="Index" class="btn btn-info w-100 w-100">Back</a>
+
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+    </div>
+
+</form>
+
+@*Client side validation*@
+@section Scripts{ }
+@{
+    <partial name="_ValidationScriptsPartial" />
+}
+
+
