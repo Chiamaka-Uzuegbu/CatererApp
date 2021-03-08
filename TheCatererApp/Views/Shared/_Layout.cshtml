@@ -6,9 +6,65 @@
     <title>@ViewData["Title"] - TheCatererApp</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" />
-    <link rel="stylesheet" href="~/css/Font.css"/>
+    <link rel="stylesheet" href="~/css/Font.css" />
+    <link rel="stylesheet" href="~/fontawesome/css/all.css" /> 
 </head>
 <body>
+
+    <div class="container-scroller">
+        <nav class="navbar-col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
+            <div class=" text-center navebar-brand-wrapper d-flex align-items-center justify-content-center">
+                <a class=" navbar-brand brand-logo"><img src="~/Images/WhatsApp Image 2021-02-26 at 1.00.27 PM.jpeg" style="height:30px"  alt="logo" /></a>
+           </div>
+            <div>
+               @*<partial name="_LoginPartial" />*@
+            </div>
+        </nav>
+        <div class=" container-fluid page-body-wrapper">
+            <nav class=" sidebar sidebar-offcanvas" id=" sidebar">
+                <ul class="nav">
+                    <li class="nav-item">
+                        <a class=" nav-link" data-toggle="collapse" href="#Caterer" aria-expanded="false" aria-controls="ui-basic">
+                            <i class="fas fa-utensils fa-lg text-primary"></i>
+                            <span class=" menu-title">Caterer</span>
+                            <i class="menu-arrow text-primary"></i>
+                        </a>
+                        <div class=" collapse" id="Caterer">
+                            <ul class=" nav-flex-column sub-menu">
+                                <li class=" nav-item"><a class=" nav-link" asp-controller="Caterer" asp-action="Create">New Caterer</a></li>
+                                <li class=" nav-item"><a class=" nav-link" asp-controller="Caterer" asp-action="Index">List of Caterers</a></li>
+                            </ul> 
+                        </div>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class=" nav-link" data-toggle="collapse" href="#Customer" aria-expanded="false" aria-controls="ui-basic">
+                            <i class="fas fa-users fa-lg text-primary"></i>
+                            <span class=" menu-title">Customer</span>
+                            <i class="menu-arrow text-primary"></i>
+                        </a>
+                        <div class=" collapse" id="Customer">
+                            <ul class=" nav-flex-column sub-menu">
+                                <li class=" nav-item"><a class=" nav-link" asp-controller="Customer" asp-action="Create">New Customer</a></li>
+                                <li class=" nav-item"><a class=" nav-link" asp-controller="Customer" asp-action="Index">Customer Order History</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+
+            </nav>
+            @*<div class=" main-panel">
+                <partial name=" "/>
+                <div class="content-wrapper"> 
+                    @RenderBody()
+
+                </div>*@
+
+            </div>
+
+        </div>
+    
+
     <header>
         <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
             <div class="container">
@@ -23,7 +79,7 @@
                             <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Caterer" asp-action="Index">Caterer</a>
+                            <a class="nav-link text-danger" asp-area="" asp-controller="Caterer" asp-action="Index">Caterer</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-controller="About Us" asp-action="Index">About Us</a>

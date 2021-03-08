@@ -36,7 +36,7 @@ namespace TheCatererApp
                 .AddEntityFrameworkStores<CatererDbContext>();
             services.AddControllersWithViews();
 
-            services.AddDbContext<CatererDbContext>(option => option.UseSqlServer(Configuration.GetConnectionString("CatererConnection")));
+           // services.AddDbContext<CatererDbContext>(option => option.UseSqlServer(Configuration.GetConnectionString("CatererConnection")));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
