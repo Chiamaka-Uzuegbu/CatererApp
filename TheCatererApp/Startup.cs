@@ -30,7 +30,9 @@ namespace TheCatererApp
             services.AddDbContext<CatererDbContext>(options =>
                 options.UseSqlServer(
                     Configuration.GetConnectionString("CatererConnection")));
-            services.AddDatabaseDeveloperPageExceptionFilter();
+
+            //services.AddIdentity<IdentityUser, IdentityRole>().AddEntityFrameworkStores<CatererDbContext>();
+            //services.AddDatabaseDeveloperPageExceptionFilter();
 
             services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
                 .AddEntityFrameworkStores<CatererDbContext>();

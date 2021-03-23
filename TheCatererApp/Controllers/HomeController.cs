@@ -20,13 +20,14 @@ namespace TheCatererApp.Controllers
 
         public IActionResult Index()
         {
-            return View();
+            return Redirect("http://127.0.0.1:5500/index.html#");
         }
 
         public IActionResult Privacy()
         {
             return View();
         }
+       
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()

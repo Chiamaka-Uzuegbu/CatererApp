@@ -1,4 +1,5 @@
 ﻿
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ using TheCatererApp.Models;
 
 namespace TheCatererApp.DataAccess
 {
-   public class CatererDbContext: DbContext
+   public class CatererDbContext: IdentityDbContext
     {
 
         public CatererDbContext(DbContextOptions<CatererDbContext> options) : base(options)
@@ -24,5 +25,11 @@ namespace TheCatererApp.DataAccess
         public DbSet <Dish> Dishes { get; set; }
         public DbSet <Customer> Customers { get; set; }
         public DbSet <Chat> Chats { get; set; }
+
+        //protected override void OnModelCreating(ModelBuilder builder)
+        //{
+        //    base.OnModelCreating(builder);
+          
+        //}
     }
 }
